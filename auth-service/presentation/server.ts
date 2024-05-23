@@ -2,7 +2,8 @@ import express, { Application, NextFunction, Request, Response } from 'express'
 import dotenv from 'dotenv'
 dotenv.config()
 import cookieParser from 'cookie-parser'
-
+import { authRoutes } from '../infrastructure/routers/authRoute'
+import { dependencies } from '../config/dependencies'
 
 const app: Application = express()
 const PORT: number = Number(process.env.PORT) || 80001
@@ -10,6 +11,8 @@ const PORT: number = Number(process.env.PORT) || 80001
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
+
+app.use('/', authRoutes(dependencies))
 
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
     console.log(error.message)

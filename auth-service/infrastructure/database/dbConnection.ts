@@ -13,6 +13,7 @@ export default async () => {
         }
 
         await mongoose.connect(mongoUrl.trim())
+        console.log("AuthDB Connected ✅")
 
     } catch (error: Error | any) {
         console.error(`❌❌❌ Database Connection failed ❌❌❌`)
