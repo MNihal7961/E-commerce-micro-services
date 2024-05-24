@@ -6,7 +6,7 @@ import { authRoutes } from '../infrastructure/routers/authRoute'
 import { dependencies } from '../config/dependencies'
 
 const app: Application = express()
-const PORT: number = Number(process.env.PORT) || 80001
+const PORT: number = Number(process.env.PORT) || 9001
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
