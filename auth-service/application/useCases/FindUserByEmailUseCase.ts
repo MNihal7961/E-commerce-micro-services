@@ -8,8 +8,6 @@ export const findUserByEmailUseCase = (dependencies: IDependencies) => {
         execute: async (email: string): Promise<UserEntity | null> => {
 
             return await repositories.findByEmail(email);
-
-
         }
     };
 };
