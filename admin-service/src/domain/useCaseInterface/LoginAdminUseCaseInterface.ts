@@ -1,5 +1,5 @@
 import { User, UserData } from "../entities";
 
-export interface AdminUSerUseCase {
+export interface AddUserUseCase {
     execute(userData: UserData): Promise<User | null>
 }
