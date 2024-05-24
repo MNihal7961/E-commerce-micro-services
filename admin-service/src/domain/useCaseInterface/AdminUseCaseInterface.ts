@@ -1,5 +1,5 @@
-import { AdminLogin, AdminEntity } from "../entities";
+import { AdminLogin, AdminEntity } from "../entities/index"
 
 export interface loginAdminUseCase {
-    execute(credentials: AdminLogin): Promise<AdminEntity | null>
+    execute(credentials: AdminLogin): Promise<AdminEntity | null>;
 }

@@ -1,5 +1,6 @@
-import { User, UserData } from "../entities";
+import {User,UserData} from "../entities"
 
-export interface AddUserUseCase {
-    execute(userData: UserData): Promise<User | null>
+
+export interface AddUserUseCase{
+    execute(userData: UserData): Promise<User | null >;
 }
