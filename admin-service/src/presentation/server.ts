@@ -24,3 +24,5 @@ app.listen(PORT, () => {
     console.log("Admin Service Running ✅")
     console.log(`http://localhost:${PORT}`)
 })
+
+export default app
