@@ -1,7 +1,7 @@
-import { IUseCases } from "./IUseCases"
-import { IRepositories } from "./IRepositories"
+import { IRepositories } from './IRepositories'
+import { IUseCases } from './IUseCases'
 
 export interface IDependencies {
     repositories: IRepositories,
-    useCases: IUseCases
+    useCases: IUseCases | any
 }

@@ -1,4 +1,2 @@
- export * from './addProductUseCase'
- export * from './listProductsUseCase'
-
- 
+export * from "./addProductUseCase"
+export * from "./listProductsUseCase"

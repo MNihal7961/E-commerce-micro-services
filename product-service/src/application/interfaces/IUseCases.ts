@@ -6,4 +6,3 @@ export interface IUseCases {
     addProductUseCase: (dependencies: IDependencies) => IAddProductUseCase;
     listProductUseCase: (dependencies: IDependencies) => IListProductUseCase;
 }
-

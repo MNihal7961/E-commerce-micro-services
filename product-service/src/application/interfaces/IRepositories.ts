@@ -1,6 +1,6 @@
-import { Product,ProductRequest } from "../../domain/entities";
+import { ProductRequest, Product, } from '../../domain/entities'
 
-export interface IRepositories{
-    addProduct:(data:ProductRequest)=>Promise <Product | null >;
-    listProduct:(token:string)=>Promise <Product |null >;
+export interface IRepositories {
+    addProduct: (data: ProductRequest) => Promise<Product | null>
+    listProduct: (token: string) => Promise<Product[] | null>
 }
