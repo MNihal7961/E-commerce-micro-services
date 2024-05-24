@@ -3,5 +3,5 @@ import { IUseCases } from "./IUseCases";
 
 export interface IDependencies {
     repositories: IRepositories
-    useCases: IUseCases
+    useCases: IUseCases | any
 }
