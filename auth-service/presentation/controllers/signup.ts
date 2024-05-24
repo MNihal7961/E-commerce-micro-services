@@ -47,7 +47,7 @@ export const signupController = (dependencies: IDependencies) => {
                 const existingUser = await findUserByEmailUseCase(dependencies).execute(
                     credentials.email
                 );
-                console.log("Existing user:", existingUser);
+
                 if (existingUser) {
                     res
                         .status(409)
