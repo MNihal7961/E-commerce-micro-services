@@ -17,8 +17,8 @@ export const addProductController = (dependencies: IDependencies) => {
             }
             const product: Product | null = await addProductUseCase(
                 dependencies
-            ).execute(data);
-            res.status(201).json({ success: true, data: product });
+            ).execute(data)
+
             if (product) {
                 const addedProduct = {
                     _id: product._id,
@@ -29,7 +29,7 @@ export const addProductController = (dependencies: IDependencies) => {
                 };
 
                 productCreatedProducer(addedProduct);
-                res.status(201).json({ success: true, data: product });
+                res.status(201).json({ success: true, data: product, message: `${product.name} Added Success ✅` });
             } else {
                 res.status(404).json({ success: false, message: "Product not found" });
             }

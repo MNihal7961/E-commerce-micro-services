@@ -2,7 +2,8 @@ import express, { Request, Response, NextFunction, Application } from 'express'
 import dotenv from 'dotenv'
 dotenv.config()
 import cookieParser from 'cookie-parser'
-
+import { dependencies } from '../config/dependencies'
+import { addProduct } from '../infrastrucure/routes/productRoutes'
 
 const app: Application = express()
 const PORT: number = Number(process.env.PORT) || 9003
@@ -11,6 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
+app.use(addProduct(dependencies))
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     const errorResponse = {

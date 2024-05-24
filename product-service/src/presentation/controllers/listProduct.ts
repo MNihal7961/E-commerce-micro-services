@@ -9,7 +9,7 @@ export const listProductsController = (dependencies: IDependencies) => {
         const { useCases: { listProductUseCase } } = dependencies;
         try {
             const token: string | any = req.cookies.user_jwt;
-    
+            
             if (!token) {
                 throw new Error('Authentication failed due to token undefined 😓')
             }
